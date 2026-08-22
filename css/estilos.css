@@ -1,0 +1,10 @@
+:root {
+    --color-letra: rgba(26,25,71, 1);
+}
+
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
