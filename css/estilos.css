@@ -121,7 +121,7 @@ main {
     display: flex;
     flex-direction: column;
 
-    padding: 4rem;
+    padding: clamp(2rem, 6vw, 4rem);
 
     /* Animación de entrada al cargar cada página. */
     animation: aparecer 0.5s ease;
@@ -197,7 +197,8 @@ main {
 
     gap: 4rem;
 
-    padding: 3rem 4rem;
+    padding: clamp(2rem, 5vw, 3rem)
+             clamp(1.5rem, 5vw, 4rem);
 
     background: rgba(255, 255, 255, 0.12);
     border: 1px solid rgba(255, 255, 255, 0.3);
