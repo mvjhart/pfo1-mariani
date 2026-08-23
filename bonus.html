@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" 
+        content="Primer Practica Profesional Obligatoria de Frontend. 
+        Solo HTML y CSS.">
+    <meta name="robots" content="noindex">
+
+    <title>Bonus | PFO1 - Maria Victoria Mariani</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <!-- ################## Google Font: Inter ######################## -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!-- ############################################################## -->
+     
+</head>
+<body>
+    <header class="header" id="header">
+        <nav>
+            <ul>
+                <li><a href="index.html">Presentación</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="bonus.html" aria-current="page">Bonus</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main class="bonus">
+
+        <h1>Excusatrón 3000</h1>
+
+        <p>
+            Generador de excusas insólitas pero formalmente válidas.
+        </p>
+
+        <form class="formulario">
+
+            <div class="campo">
+                <label for="evento">
+                    ¿A qué evento no querés ir?
+                </label>
+
+                <input
+                    type="text"
+                    id="evento"
+                    name="evento"
+                    placeholder="Ej: Cumple de la tia Malena"
+                    required
+                >
+            </div>
+
+            <div class="campo">
+                <label for="persona">
+                    ¿Quién te invitó?
+                </label>
+
+                <input
+                    type="text"
+                    id="persona"
+                    name="persona"
+                    placeholder="Ej: Mi amigo Juan"
+                    required
+                >
+            </div>
+
+            <div class="campo">
+                <label for="categoria">
+                    Categoría de la excusa
+                </label>
+
+                <select
+                    id="categoria"
+                    name="categoria"
+                    required
+                >
+                    <option value="" disabled selected>
+                        Seleccioná un motivo...
+                    </option>
+
+                    <option value="alien">
+                        Intervención extraterrestre / paranormal
+                    </option>
+
+                    <option value="domestica">
+                        Desastre doméstico absurdo
+                    </option>
+
+                    <option value="existencial">
+                        Dilema existencial o filosofía repentina
+                    </option>
+
+                    <option value="salud">
+                        Afección médica sospechosa
+                    </option>
+                </select>
+            </div>
+
+            <fieldset class="slider">
+                <legend>Nivel de dramatismo</legend>
+
+                <input
+                    type="range"
+                    id="dramatismo"
+                    name="dramatismo"
+                    min="1"
+                    max="5"
+                    value="3"
+                    aria-describedby="dramatismo-ayuda"
+                >
+
+                <div class="medidores" aria-hidden="true">
+                    <span>Discreto</span>
+                    <span>Moderado</span>
+                    <span>Telenovela</span>
+                </div>
+                <span id="dramatismo-ayuda" class="solo-lectores">1 es discreto, 3 es moderado y 5 es telenovela.</span>
+            </fieldset>
+
+            <fieldset class="radio">
+                <legend>Canal de entrega</legend>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="canal"
+                        value="whatsapp"
+                        checked
+                    >
+                    WhatsApp
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="canal"
+                        value="carta"
+                    >
+                    Carta formal
+                </label>
+            </fieldset>
+
+            <a href="#modal-excusa" class="btn-submit">
+                Generar excusa
+            </a>
+
+        </form>
+
+    </main>
+    <footer class="footer">
+        <section class="habilidades">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>PHP</li>
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+                <li>C#</li>
+                <li>SQL</li>
+            </ul>
+        </section>
+        <div class="info">
+            <p>María Victoria Mariani</p>
+            <div>
+                <a href="https://ifts29-portada.vercel.app/trayecto/pfo1/" 
+                    target="_blank"
+                    rel="noopener"
+                    title="Ir a la consigna del PFO"
+                    >
+                    PFO1 - Frontend
+                </a>
+            </div>
+        </div>
+    </footer>
+    <div
+        id="modal-excusa"
+        class="modal-overlay"
+        role="dialog"
+        aria-labelledby="modal-titulo"
+        aria-modal="true"
+    >
+        <section class="modal-card">
+
+            <div class="modal-icon" aria-hidden="true">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path d="M10.3 2.9 1.8 17a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 2.9a2 2 0 0 0-3.4 0Z"/>
+                    <line x1="12" y1="9" x2="12" y2="13"/>
+                    <line x1="12" y1="17" x2="12.01" y2="17"/>
+                </svg>
+            </div>
+
+            <h2 id="modal-titulo">
+                ¡Excusa generada con éxito!
+            </h2>
+
+            <p>
+                Copiá este texto y envialo inmediatamente:
+            </p>
+
+            <blockquote class="excusa">
+                "¡Hola! Lamento muchísimo no poder asistir hoy.
+                Justo cuando me estaba preparando, un grupo de
+                mapaches abrió un portal interdimensional en mi
+                cocina y ahora estoy esperando a Control de Plagas
+                Cuánticas. ¡Te mando un abrazo gigante!"
+            </blockquote>
+
+            <a href="#header" class="btn" title="Cerrar modal">
+                Cerrar
+            </a>
+
+        </section>
+    </div>
+
+</body>
+</html>
