@@ -1,10 +1,122 @@
 :root {
-    --color-letra: rgba(26,25,71, 1);
+    --color-letra: rgba(26, 25, 71, 1);
+    --color-rosa: rgba(242,121,178,1);
+    --color-azul: rgba(55,108,166,1);
+    --color-violeta: rgba(55,60,166,1);
+}
+
+/**************** RESET ****************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 
+a:link {
+    color:#3765a6;
+}
+
+a:visited {
+    color:#373CA6;
+}
+
+/**************** HTML ****************/
+
+html {
+    scroll-behavior: smooth;
+}
+
+/**************** CUERPO ****************/
 
 body {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
+    color: var(--color-letra);
+
+    background-image: conic-gradient(
+        from 92deg at bottom right,
+        #373CA6 0%,
+        #F279B2 30%,
+        #A3D3D5 60%,
+        #F2C84B 92%
+    );
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
 }
+
+
+/**************** HEADER ****************/
+.header {
+    flex: 0;
+    padding: clamp(1rem, 4vw, 2rem) clamp(1rem, 5vw, 4rem);
+}
+
+/**************** HEADER: NAV ****************/
+
+.header ul {
+    display:flex;
+    justify-content: flex-end;
+    gap: clamp(0.4rem, 2vw, 1rem);
+}
+
+.header nav a {
+    display: inline-block;
+    position: relative;
+
+    padding: clamp(0.45rem, 1.5vw, 0.7rem)
+             clamp(0.7rem, 2.5vw, 1.3rem);
+
+    border: 2px solid var(--color-letra);
+
+    color: var(--color-letra);
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    font-weight: 600;
+
+    background:
+        linear-gradient(
+            var(--color-letra),
+            var(--color-letra)
+        ) left bottom / 0% 100% no-repeat;
+
+    transition:
+        background-size 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.header nav a:hover {
+    background-size: 100% 100%;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.header nav a:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
