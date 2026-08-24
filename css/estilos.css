@@ -147,7 +147,7 @@ main {
 }
 
 .presentacion h1 {
-    font-size: clamp(2.7rem, 7vw, 5rem);
+    font-size: clamp(2.1rem, 7vw, 5rem);
     line-height: 0.9;
     letter-spacing: -0.04em;
     max-width: 14ch;
@@ -256,10 +256,30 @@ footer .info a:hover {
 }
 
 footer .info img {
-    width: clamp(1.2rem, 3vw, 1.5rem);
-    height: clamp(1.2rem, 3vw, 1.5rem);
+    width: clamp(1.5rem, 3vw, 1.9rem);
+    height: clamp(1.5rem, 3vw, 1.9rem);
     cursor: pointer;
 }
+
+
+@media (max-width: 650px) {
+    footer .info a:first-of-type {
+
+        background-color: var(--color-violeta);
+        color:white;
+        padding: clamp(0.8rem, 2vw, 1rem);
+
+    }
+
+    footer .info img {
+        width: 1.86rem;
+        height: 1.86rem;
+    }
+
+}
+
+
+
 
 
 /**************** FOOTER: HABILIDADES ****************/
@@ -328,6 +348,7 @@ footer .habilidades h2 {
             transparent
         );
     }
+
 }
 
 /**************** FORMULARIO ****************/
@@ -480,6 +501,14 @@ fieldset legend {
 .formulario .btn-submit:focus-visible {
     outline: 3px solid white;
     outline-offset: 3px;
+}
+
+@media (max-width: 650px) {
+    .formulario button,
+    .formulario .btn-submit {
+        align-self: center;
+    }
+
 }
 
 /* =========================
